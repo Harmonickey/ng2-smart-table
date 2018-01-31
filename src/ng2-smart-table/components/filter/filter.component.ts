@@ -27,6 +27,12 @@ import { Subscription } from 'rxjs/Subscription';
                         [column]="column"
                         (filter)="onFilter($event)">
       </completer-filter>
+      <datepicker-filter *ngSwitchCase="'datepicker'"
+                        [query]="query"
+                        [ngClass]="inputClass"
+                        [column]="column"
+                        (filter)="onFilter($event)">
+      </datepicker-filter>
       <input-filter *ngSwitchDefault
                     [query]="query"
                     [ngClass]="inputClass"

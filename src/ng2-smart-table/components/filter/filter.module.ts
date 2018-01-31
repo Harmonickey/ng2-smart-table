@@ -8,6 +8,8 @@ import { CheckboxFilterComponent } from './filter-types/checkbox-filter.componen
 import { CompleterFilterComponent } from './filter-types/completer-filter.component';
 import { InputFilterComponent } from './filter-types/input-filter.component';
 import { SelectFilterComponent } from './filter-types/select-filter.component';
+import { DatePickerFilterComponent } from './filter-types/datepicker-filter.component';
+import { MyDatePickerModule } from 'mydatepicker';
 
 const FILTER_COMPONENTS = [
   FilterComponent,
@@ -15,6 +17,7 @@ const FILTER_COMPONENTS = [
   CompleterFilterComponent,
   InputFilterComponent,
   SelectFilterComponent,
+  DatePickerFilterComponent
 ];
 
 @NgModule({
@@ -23,6 +26,7 @@ const FILTER_COMPONENTS = [
     FormsModule,
     ReactiveFormsModule,
     Ng2CompleterModule,
+    MyDatePickerModule
   ],
   declarations: [
     ...FILTER_COMPONENTS,
