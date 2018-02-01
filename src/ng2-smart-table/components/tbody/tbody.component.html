@@ -50,7 +50,9 @@
     </td>
   </tr>
   <tr *ngIf="row.showDetails">
-    <custom-row-component [row]="row"></custom-row-component>
+    <td [attr.colspan]="grid.getColumns().length + (isActionAdd || isActionEdit || isActionDelete)">
+      <custom-row-component [row]="row"></custom-row-component>
+    </td>
   </tr>
 </ng-container>
 
