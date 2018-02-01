@@ -13,14 +13,14 @@ export class DataSet {
 
   constructor(data: Array<any> = [], protected columnSettings: Object, protected rowSettings: Object) {
     this.createColumns(columnSettings);
-    this.setData(data);
+    this.setData(data, rowSettings);
 
     this.createNewRow(rowSettings);
   }
 
-  setData(data: Array<any>) {
+  setData(data: Array<any>, settings: any) {
     this.data = data;
-    this.createRows();
+    this.createRows(settings);
   }
 
   getColumns(): Array<Column> {
@@ -140,10 +140,10 @@ export class DataSet {
    * Create rows based on current data prepared in data source
    * @private
    */
-  createRows() {
+  createRows(settings: any) {
     this.rows = [];
     this.data.forEach((el, index) => {
-      this.rows.push(new Row(index, el, this));
+      this.rows.push(new Row(index, el, settings, this));
     });
   }
 }
