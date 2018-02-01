@@ -8,9 +8,20 @@ export class Row {
   isInEditing: boolean = false;
   cells: Array<Cell> = [];
 
+  showDetails: boolean = false;
+  detailsSource: any;
+  detailsSettings: any;
 
   constructor(public index: number, protected data: any, protected _dataSet: DataSet) {
     this.process();
+  }
+
+  toggleDetails(details: any): void {
+    if (!this.detailsSource) {
+      this.detailsSource = details.data;
+      this.detailsSettings = details.settings;
+    }
+    this.showDetails = !this.showDetails;
   }
 
   getCell(column: Column): Cell {
