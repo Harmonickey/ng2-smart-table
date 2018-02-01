@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Ng2SmartTableComponent } from 'ng2-smart-table.component';
+import { Ng2SmartTableComponent } from '../ng2-smart-table.component';
 
 @NgModule({
     imports: [
