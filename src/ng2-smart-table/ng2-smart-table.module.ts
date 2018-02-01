@@ -7,8 +7,7 @@ import { FilterModule } from './components/filter/filter.module';
 import { PagerModule } from './components/pager/pager.module';
 import { TBodyModule } from './components/tbody/tbody.module';
 import { THeadModule } from './components/thead/thead.module';
-
-import { Ng2SmartTableComponent } from './ng2-smart-table.component';
+import { Ng2SmartTableSharedModule } from './shared/ng2-smart-table-shared.module';
 
 @NgModule({
   imports: [
@@ -20,13 +19,8 @@ import { Ng2SmartTableComponent } from './ng2-smart-table.component';
     PagerModule,
     TBodyModule,
     THeadModule,
-  ],
-  declarations: [
-    Ng2SmartTableComponent,
-  ],
-  exports: [
-    Ng2SmartTableComponent,
-  ],
+    Ng2SmartTableSharedModule
+  ]
 })
 export class Ng2SmartTableModule {
 }
