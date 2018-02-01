@@ -45,7 +45,7 @@ export class Grid {
 
   setSettings(settings: Object) {
     this.settings = settings;
-    this.dataSet = new DataSet([], this.getSetting('columns'));
+    this.dataSet = new DataSet([], this.getSetting('columns'), this.getSetting('rows'));
 
     if (this.source) {
       this.source.refresh();

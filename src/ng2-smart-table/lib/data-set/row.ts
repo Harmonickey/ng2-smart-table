@@ -12,7 +12,9 @@ export class Row {
   detailsSource: any;
   detailsSettings: any;
 
-  constructor(public index: number, protected data: any, protected _dataSet: DataSet) {
+  renderComponent: any = null;
+
+  constructor(public index: number, protected data: any, protected settings: any, protected _dataSet: DataSet) {
     this.process();
   }
 
@@ -55,6 +57,7 @@ export class Row {
 
   process() {
     this.cells = [];
+    this.renderComponent = this.settings['renderComponent'];
     this._dataSet.getColumns().forEach((column: Column) => {
       const cell = this.createCell(column);
       this.cells.push(cell);

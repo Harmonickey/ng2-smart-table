@@ -11,11 +11,11 @@ export class DataSet {
   protected selectedRow: Row;
   protected willSelect: string = 'first';
 
-  constructor(data: Array<any> = [], protected columnSettings: Object) {
+  constructor(data: Array<any> = [], protected columnSettings: Object, protected rowSettings: Object) {
     this.createColumns(columnSettings);
     this.setData(data);
 
-    this.createNewRow();
+    this.createNewRow(rowSettings);
   }
 
   setData(data: Array<any>) {
@@ -118,8 +118,8 @@ export class DataSet {
     return this.selectedRow;
   }
 
-  createNewRow() {
-    this.newRow = new Row(-1, {}, this);
+  createNewRow(settings: any) {
+    this.newRow = new Row(-1, {}, settings, this);
     this.newRow.isInEditing = true;
   }
 

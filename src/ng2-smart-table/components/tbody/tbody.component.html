@@ -50,9 +50,7 @@
     </td>
   </tr>
   <tr *ngIf="row.showDetails">
-    <!-- <ng2-smart-table [source]="row.detailsSource" [settings]="row.detailsSettings"></ng2-smart-table> -->
-    <!-- <ng-template ng2-custom-details></ng-template> -->
-    <div>These are details...</div>
+    <custom-row-component [row]="row"></custom-row-component>
   </tr>
 </ng-container>
 
