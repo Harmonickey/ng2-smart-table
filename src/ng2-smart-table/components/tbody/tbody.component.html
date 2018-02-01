@@ -49,7 +49,7 @@
       </ng2-st-tbody-edit-delete>
     </td>
   </tr>
-  <tr [hidden]="!row.showDetails">
+  <tr *ngIf="row.showDetails">
     <ng2-smart-table [source]="row.detailsSource" [settings]="row.detailsSettings"></ng2-smart-table>
   </tr>
 </ng-container>
