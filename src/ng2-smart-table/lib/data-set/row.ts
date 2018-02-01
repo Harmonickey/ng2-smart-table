@@ -17,9 +17,11 @@ export class Row {
   }
 
   toggleDetails(details: any): void {
-    if (!this.detailsSource) {
+    if (!this.detailsSource && details && details.data) {
       this.detailsSource = details.data;
-      this.detailsSettings = details.settings;
+      if (details.settings) {
+        this.detailsSettings = details.settings;
+      }
     }
     this.showDetails = !this.showDetails;
   }

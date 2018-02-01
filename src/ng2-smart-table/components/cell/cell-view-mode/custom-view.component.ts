@@ -57,7 +57,8 @@ export class CustomViewComponent implements OnInit, OnDestroy {
   protected getPatch(): ViewCell {
     return {
       value: this.cell.getValue(),
-      rowData: this.cell.getRow().getData()
+      rowData: this.cell.getRow().getData(),
+      row: this.cell.getRow()
     }
   }
 }
