@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { CellModule } from '../cell/cell.module';
 import { Ng2SmartTableSharedModule } from '../../shared/ng2-smart-table-shared.module';
 
 import { Ng2SmartTableTbodyComponent } from './tbody.component';
@@ -21,7 +20,6 @@ const TBODY_COMPONENTS = [
   imports: [
     CommonModule,
     FormsModule,
-    CellModule,
     Ng2SmartTableSharedModule
   ],
   declarations: [
