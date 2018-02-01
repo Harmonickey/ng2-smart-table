@@ -105,7 +105,7 @@ export class Grid {
       } else {
         this.source.prepend(newData).then(() => {
           this.createFormShown = false;
-          this.dataSet.createNewRow();
+          this.dataSet.createNewRow(this.getSetting('rows'));
         });
       }
     }).catch((err) => {
@@ -173,7 +173,7 @@ export class Grid {
 
   processDataChange(changes: any) {
     if (this.shouldProcessChange(changes)) {
-      this.dataSet.setData(changes['elements']);
+      this.dataSet.setData(changes['elements'], this.getSetting('rows'));
       if (this.getSetting('selectMode') !== 'multi') {
         const row = this.determineRowToSelect(changes);
 
