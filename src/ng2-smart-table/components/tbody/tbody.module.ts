@@ -6,7 +6,7 @@ import { Ng2SmartTableTbodyComponent } from './tbody.component';
 import { TbodyCreateCancelComponent } from './cells/create-cancel.component';
 import { TbodyEditDeleteComponent } from './cells/edit-delete.component';
 import { TbodyCustomComponent } from './cells/custom.component';
-import { CustomRowComponent } from '../row/custom-row.component';
+import { CustomRowDetailsComponent } from '../row/custom-row-details.component';
 
 import { CellModule } from '../cell/cell.module';
 
@@ -15,7 +15,7 @@ const TBODY_COMPONENTS = [
   TbodyEditDeleteComponent,
   TbodyCustomComponent,
   Ng2SmartTableTbodyComponent,
-  CustomRowComponent
+  CustomRowDetailsComponent
 ];
 
 @NgModule({

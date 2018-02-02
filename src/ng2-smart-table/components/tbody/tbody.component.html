@@ -51,7 +51,7 @@
   </tr>
   <tr *ngIf="row.showDetails">
     <td [attr.colspan]="grid.getColumns().length + (isActionAdd || isActionEdit || isActionDelete)">
-      <custom-row-component [row]="row"></custom-row-component>
+      <custom-row-details-component [row]="row"></custom-row-details-component>
     </td>
   </tr>
 </ng-container>

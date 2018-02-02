@@ -76,6 +76,7 @@ export class Ng2SmartTableComponent implements OnChanges {
     },
     noDataMessage: 'No data found',
     columns: {},
+    rowDetails: {},
     pager: {
       display: true,
       perPage: 10,
